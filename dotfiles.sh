@@ -23,7 +23,6 @@ home_directory="$HOME/.config"
 current_directory="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 modules=("hypr" "kitty" "neofetch" "rofi" "waybar")
 
-
 read operation
 
 if [[ "$operation" == "I" ]]; then
@@ -47,7 +46,12 @@ elif [[ "$operation" == "F"  ]]; then
 
 
 elif [[ "$operation" == "P" ]]; then
-	echo "ss"
+	current_date = $(date +"%a, %d %b %Y %H:%M:%S %z")
+	git add --all 
+   	git commit -m "Commit of $current_date"
+   	git push
+	echo "Correctly pushed on GitHub!"
+	
 else
 	echo " "
 	echo "Invalid option, press a key to retry"
