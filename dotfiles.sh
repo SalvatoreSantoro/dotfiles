@@ -21,7 +21,7 @@ echo "           "
 
 home_directory="$HOME/.config"
 current_directory="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-modules=("hypr" "kitty" "neofetch" "rofi" "waybar")
+modules=("hypr" "kitty" "neofetch" "rofi" "waybar" "wallpapers")
 
 read operation
 
@@ -37,7 +37,7 @@ if [[ "$operation" == "I" ]]; then
 
 elif [[ "$operation" == "F"  ]]; then
 	for mod in "${modules[@]}"; do
-		echo "Copying $mod"
+ 		echo "Copying $mod"
 		cp -r "$home_directory/$mod" "$current_directory/$mod"	
 	done
 
@@ -47,7 +47,7 @@ elif [[ "$operation" == "F"  ]]; then
 
 elif [[ "$operation" == "P" ]]; then
 	current_date=$(date +"%a, %d %b %Y %H:%M:%S %z")
-	git add --all 
+	git add "$current_directory" --all 
    	git commit -m "Commit of $current_date"
    	git push
 	echo "Correctly pushed on GitHub!"
