@@ -55,6 +55,7 @@ elif [[ "$operation" == "F" ]]; then
 
 elif [[ "$operation" == "P" ]]; then
 	current_date=$(date +"%a, %d %b %Y %H:%M:%S %z")
+	echo "$current_directory"	
 	git add "$current_directory" --all 
    	git commit -m "Commit of $current_date"
    	git push
