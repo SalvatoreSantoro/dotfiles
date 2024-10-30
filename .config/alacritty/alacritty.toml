@@ -1,0 +1,40 @@
+
+[cursor]
+style = "Beam"
+
+[font]
+size = 32.0
+
+[font.normal]
+family = "Comic Sans"
+
+[window]
+startup_mode = "Windowed"
+dynamic_padding = true
+opacity = 1.0
+
+[window.padding]
+x = 6
+y = 0
+
+#[window.dimensions]
+#columns = 90
+#lines = 25
+
+[colors.normal]
+black = "#000000"
+red = "#ffffff"
+green = "#fffaff"
+yellow = "#f1fa8c"
+blue = "#bdfff9"
+magenta = "#ff79ff"
+cyan = "#ffffff"
+white = "#f8f8f2"
+
+[colors.primary]
+background = "#282a36"
+foreground = "#f8f8f2"
+
+[colors.cursor]
+text = "CellBackground"
+cursor = "CellForeground"

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 echo "                                  "
 echo "                                  "
 echo "     ..........................  "
@@ -21,24 +21,32 @@ echo "           "
 
 home_directory="$HOME/.config"
 current_directory="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-modules=("hypr" "kitty" "neofetch" "rofi" "waybar" "wallpapers")
+modules=(".zshrc" "hypr" "kitty" "neofetch" "rofi" "waybar" "wallpapers")
 
 read operation
 
 if [[ "$operation" == "I" ]]; then
 	for mod in "${modules[@]}"; do
-                echo "Copying $mod"
-                cp -r "$current_directory/$mod" "$home_directory/$mod"
-        done
+                if [[ "$mod" == ".zshrc" ]];then
+			cp "$current_directory/$mod" "$HOME"
+		else	
+                	cp -r "$current_directory/$mod" "$home_directory"        
+		fi
+		echo "Copying $mod" 
+	done
 
         echo "$current_directory => $home_directory"
         echo "DONE"
 
 
-elif [[ "$operation" == "F"  ]]; then
+elif [[ "$operation" == "F" ]]; then
 	for mod in "${modules[@]}"; do
- 		echo "Copying $mod"
-		cp -r "$home_directory/$mod" "$current_directory/$mod"	
+		if [[ "$mod" == ".zshrc" ]];then
+			cp "$HOME/$mod" "$current_directory"
+		else
+			cp -r "$home_directory/$mod" "$current_directory"	
+		fi
+		echo "Copying $mod"
 	done
 
 	echo "$home_directory  => $current_directory"
@@ -51,12 +59,11 @@ elif [[ "$operation" == "P" ]]; then
    	git commit -m "Commit of $current_date"
    	git push
 	echo "Correctly pushed on GitHub!"
+
 else
 	echo " "
 	echo "Invalid option, press a key to retry"
 	read key
-clear
-exec sh "$0" "$@"
-
+	clear
+	exec sh "$0" "$@"
 fi
-

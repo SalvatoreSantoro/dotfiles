@@ -1,0 +1,24 @@
+2024-10-27 20:42:05.380 [info] Getting Manifest... llvm-vs-code-extensions.vscode-clangd
+2024-10-27 20:42:06.145 [info] Installing extension: llvm-vs-code-extensions.vscode-clangd {"isMachineScoped":false,"installPreReleaseVersion":false,"pinned":false,"profileLocation":{"$mid":1,"external":"vscode-userdata:/home/Salvatore/.vscode-oss/extensions/extensions.json","path":"/home/Salvatore/.vscode-oss/extensions/extensions.json","scheme":"vscode-userdata"},"installOnlyNewlyAddedFromExtensionPack":true,"isApplicationScoped":false,"productVersion":{"version":"1.94.2","date":"2024-10-11T16:41:53.891Z"}}
+2024-10-27 20:42:07.011 [error] Could not load vsce-sign module Cannot find package '@vscode/vsce-sign' imported from /usr/lib/code/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js
+2024-10-27 20:42:07.011 [info] Extension signature verification is not done: llvm-vs-code-extensions.vscode-clangd
+2024-10-27 20:42:07.046 [info] Extracted extension to file:///home/Salvatore/.vscode-oss/extensions/llvm-vs-code-extensions.vscode-clangd-0.1.29-universal: llvm-vs-code-extensions.vscode-clangd
+2024-10-27 20:42:07.049 [info] Renamed to /home/Salvatore/.vscode-oss/extensions/llvm-vs-code-extensions.vscode-clangd-0.1.29-universal
+2024-10-27 20:42:07.062 [info] Extension installed successfully: llvm-vs-code-extensions.vscode-clangd vscode-userdata:/home/Salvatore/.vscode-oss/extensions/extensions.json
+2024-10-27 20:42:07.134 [error] [uncaught exception in sharedProcess]: Error: ENOENT: no such file or directory, stat '/home/Salvatore/.vscode-oss/extensions/extensions.json.vsctmp': EntryNotFound (FileSystemError): Error: ENOENT: no such file or directory, stat '/home/Salvatore/.vscode-oss/extensions/extensions.json.vsctmp'
+    at lm.create (file:///usr/lib/code/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:35:39253)
+    at Es (file:///usr/lib/code/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:35:39360)
+    at Fr.ib (file:///usr/lib/code/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:71:22661)
+    at Fr.stat (file:///usr/lib/code/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:71:15994)
+    at async eh.stat (file:///usr/lib/code/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:70:84484)
+    at async Kl.yb (file:///usr/lib/code/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:70:66600)
+2024-10-27 20:42:39.076 [info] Uninstalling extension from the profile: llvm-vs-code-extensions.vscode-clangd@0.1.29 vscode-userdata:/home/Salvatore/.vscode-oss/extensions/extensions.json
+2024-10-27 20:42:39.104 [info] Marked extension as uninstalled llvm-vs-code-extensions.vscode-clangd-0.1.29-universal
+2024-10-27 20:42:39.176 [error] [uncaught exception in sharedProcess]: Error: ENOENT: no such file or directory, stat '/home/Salvatore/.vscode-oss/extensions/extensions.json.vsctmp': EntryNotFound (FileSystemError): Error: ENOENT: no such file or directory, stat '/home/Salvatore/.vscode-oss/extensions/extensions.json.vsctmp'
+    at lm.create (file:///usr/lib/code/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:35:39253)
+    at Es (file:///usr/lib/code/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:35:39360)
+    at Fr.ib (file:///usr/lib/code/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:71:22661)
+    at Fr.stat (file:///usr/lib/code/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:71:15994)
+    at async eh.stat (file:///usr/lib/code/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:70:84484)
+    at async Kl.yb (file:///usr/lib/code/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:70:66600)
+2024-10-27 20:42:39.280 [info] Successfully uninstalled extension from the profile llvm-vs-code-extensions.vscode-clangd@0.1.29 vscode-userdata:/home/Salvatore/.vscode-oss/extensions/extensions.json

@@ -1,0 +1,9 @@
+# GIMP gimp-eraser-tool options
+
+(brush "Immagine appunti")
+(dynamics "Dynamics Off")
+(palette "Cronologia colore")
+(brush-size 565)
+(brush-spacing 0.20000000000000001)
+
+# end of gimp-eraser-tool options

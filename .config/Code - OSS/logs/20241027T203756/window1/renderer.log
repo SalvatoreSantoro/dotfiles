@@ -1,0 +1,3 @@
+2024-10-27 20:37:57.208 [info] Started local extension host with pid 12113.
+2024-10-27 20:37:59.945 [info] [perf] Render performance baseline is 52ms
+2024-10-27 20:42:07.793 [error] [Extension Host] Can't glibc version from ldd --version output: ldd (GNU libc) 2.40

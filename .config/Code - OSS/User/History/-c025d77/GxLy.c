@@ -1,0 +1,4 @@
+int stocazz(){
+    printf("Stocazz");
+    }
+
