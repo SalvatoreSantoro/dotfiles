@@ -108,6 +108,7 @@ source <(fzf --zsh)
 # Scripts
 alias dot='~/dotfiles/dotfiles.sh'
 alias path='~/dotfiles/scripts/path.sh'
+#alias unzip='~/dotfiles/scripts/unzip.sh'
 
 # ENV
 set -o vi
