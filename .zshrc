@@ -109,6 +109,7 @@ source <(fzf --zsh)
 alias dot='~/dotfiles/dotfiles.sh'
 alias path='~/dotfiles/scripts/path.sh'
 alias run_discord='~/dotfiles/scripts/run_discord.sh'
+alias docker_psa='~/dotfiles/scripts/docker_psa.sh'
 #alias unzip='~/dotfiles/scripts/unzip.sh'
 
 # ENV
