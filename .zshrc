@@ -106,11 +106,14 @@ source <(fzf --zsh)
 
  
 # Scripts
+scriptsHome="~/dotfiles/scripts"
+
 alias dot='~/dotfiles/dotfiles.sh'
-alias path='~/dotfiles/scripts/path.sh'
-alias run_discord='~/dotfiles/scripts/run_discord.sh'
-alias docker_psa='~/dotfiles/scripts/docker_psa.sh'
-#alias unzip='~/dotfiles/scripts/unzip.sh'
+alias path="$scriptsHome/path.sh"
+alias run_discord="$scriptsHome/run_discord.sh"
+alias docker_psa="$scriptsHome/docker_psa.sh"
+alias docker_stop_all="$scriptsHome/docker_stop_all.sh"
+alias unzip='~/dotfiles/scripts/unzip.sh'
 
 # ENV
 set -o vi
