@@ -1,5 +1,6 @@
 # ZSH
 export ZSH="$HOME/.oh-my-zsh"
+export FZF_BASE="/usr/bin/fzf"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time Oh My Zsh is loaded, in which case,
@@ -68,7 +69,7 @@ ZSH_THEME=""
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 
-plugins=(git zsh-interactive-cd zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(git fzf zsh-interactive-cd zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -133,6 +134,25 @@ setopt SHARE_HISTORY
 # PROMPT
 
 PS1='%F{red}%~ %(?.%F{white}.%F{white})%#%f '
+
+# Define the fcd function to search a specific directory and change to it
+fcd() {
+  local target_dir="${1:-$HOME}"  # Specify the default directory
+  local selected_dir=$(find "$target_dir" -type d 2>/dev/null | fzf --prompt="Select directory: ")
+
+  if [[ -n "$selected_dir" ]]; then
+    cd "$selected_dir"
+    zle reset-prompt  # Refresh prompt to show the new directory
+  fi
+}
+
+# Register the function as a ZLE widget
+zle -N fcd
+
+# Bind CTRL+F to activate the fcd function
+bindkey '^F' fcd
+
+
 
 # Enable highlighters
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern)
