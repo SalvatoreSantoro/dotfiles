@@ -22,5 +22,5 @@ background_tint_gaps	0.8
 include current-theme.conf
 
 # Clear the terminal screen by erasing all contents
-map ctrl+Super+L clear_terminal clear active
+map ctrl+shift+e clear_terminal
 
