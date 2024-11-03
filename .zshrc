@@ -115,6 +115,7 @@ alias run_discord="$scriptsHome/run_discord.sh"
 alias docker_psa="$scriptsHome/docker_psa.sh"
 alias docker_stop_all="$scriptsHome/docker_stop_all.sh"
 alias unzip='~/dotfiles/scripts/unzip.sh'
+alias remove="$scriptsHome/remove.sh"
 
 # ENV
 set -o vi
