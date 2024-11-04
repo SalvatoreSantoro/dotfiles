@@ -1,0 +1,5 @@
+install:
+1 - hyprland
+2 - hyprutils
+3 - hyprwayland-scanner
+4 - xdg-desktop-portal-hyprland
