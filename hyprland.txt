@@ -1,5 +1,7 @@
 install:
 1 - hyprland
-2 - hyprutils
-3 - hyprwayland-scanner
-4 - xdg-desktop-portal-hyprland
+2 - hyprpaper
+3 - hyprlang
+4 - hyprutils
+5 - hyprwayland-scanner
+6 - xdg-desktop-portal-hyprland
