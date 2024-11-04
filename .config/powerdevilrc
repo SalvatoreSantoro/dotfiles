@@ -1,5 +1,0 @@
-[AC][Display]
-TurnOffDisplayIdleTimeoutWhenLockedSec=-2
-
-[BatteryManagement]
-BatteryCriticalAction=0

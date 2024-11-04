@@ -1,9 +1,0 @@
-2024-10-28 21:33:23.900 [info] Extension host with pid 3405 started
-2024-10-28 21:33:23.900 [info] Skipping acquiring lock for /home/Salvatore/.config/Code - OSS/User/workspaceStorage/ed0efe3ba411c90b20220b488fb85b18.
-2024-10-28 21:33:23.986 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*'
-2024-10-28 21:33:24.023 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
-2024-10-28 21:33:24.057 [info] Eager extensions activated
-2024-10-28 21:33:24.065 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
-2024-10-28 21:33:24.067 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
-2024-10-28 21:33:29.238 [info] Extension host terminating: renderer closed the MessagePort
-2024-10-28 21:33:29.239 [info] Extension host with pid 3405 exiting with code 0
