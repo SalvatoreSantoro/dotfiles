@@ -82,6 +82,9 @@ source <(fzf --zsh)
 
 # You may need to manually set your language environment
 export LANG=it_IT.UTF-8
+#export XCURSOR_THEME=Breeze-Dark
+#export XCURSOR_SIZE=10
+
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then

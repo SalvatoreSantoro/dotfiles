@@ -1,0 +1,11 @@
+# Logo key. Use Mod1 for Alt.
+set $mod Super
+
+set $left h
+set $down j
+set $up k
+set $right l
+
+set $term kitty
+set $menu rofi
+set $browser firefox
