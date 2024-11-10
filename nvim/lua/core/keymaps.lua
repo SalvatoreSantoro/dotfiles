@@ -6,12 +6,22 @@ vim.g.maplocalleader = ' '
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 -- For conciseness local opts = { noremap = true, silent = false }
 
+local opts = { noremap = true, silent = true}
+
+vim.keymap.set('n', '<leader>e', ':Neotree toggle position=left<CR>', opts)
+
+
 -- save file
-vim.keymap.set('n', '<D-s>', '<cmd> w <CR>', opts)
+vim.keymap.set('n', '<C-s>', '<cmd> w <CR>', opts)
+
+
+-- save file without formatting
+
+vim.keymap.set('n', '<leader>sn', '<cmd>noautocmd w <CR>', opts)
 
 
 -- quit file
-vim.keymap.set('n', '<D-q>', '<cmd> q <CR>', opts)
+vim.keymap.set('n', '<C-q>', '<cmd> q <CR>', opts)
 
 -- delete single character without copying into register
 vim.keymap.set('n', 'x', '"_x', opts)
@@ -32,7 +42,7 @@ vim.keymap.set('n', '<Right>', ':vertical resize +2<CR>', opts)
 
 -- Buffers
 vim.keymap.set('n', '<Tab>', ':bnext<CR>', opts)
-vim.keymap.set('n', '<S-Tab>', ':bprevious<CR>', opts)
+vim.keymap.set('n', '<C-Tab>', ':bprevious<CR>', opts)
 vim.keymap.set('n', '<leader>x', ':bdelete!<CR>', opts) -- close buffer
 vim.keymap.set('n', '<leader>b', '<cmd> enew <CR>', opts) -- new buffer
 
