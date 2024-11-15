@@ -13,7 +13,13 @@ return {
 
     -- Allows extra capabilities provided by nvim-cmp
     'hrsh7th/cmp-nvim-lsp',
-  },
+    'hrsh7th/nvim-cmp', -- Main completion plugin
+    'hrsh7th/cmp-buffer', -- Buffer completions
+    'hrsh7th/cmp-path', -- Path completions
+    'hrsh7th/cmp-cmdline', -- Cmdline completions
+    'saadparwaiz1/cmp_luasnip', -- Snippet completions
+    'L3MON4D3/LuaSnip', -- Snippet engine
+},
   config = function()
     -- Brief aside: **What is LSP?**
     --
@@ -44,6 +50,62 @@ return {
     --    That is to say, every time a new file is opened that is associated with
     --    an lsp (for example, opening `main.rs` is associated with `rust_analyzer`) this
     --    function will be executed to configure the current buffer
+    -- Setup for nvim-cmp
+    local cmp = require('cmp')
+    local luasnip = require('luasnip')
+
+    -- nvim-cmp configuration
+    cmp.setup {
+      snippet = {
+        expand = function(args)
+          luasnip.lsp_expand(args.body) -- snippet expansion
+        end,
+      },
+      mapping = {
+        ['<tab>'] = cmp.mapping(function(fallback)
+          if cmp.visible() then
+            cmp.select_next_item()
+          elseif luasnip.expand_or_jumpable() then
+            luasnip.expand_or_jump()
+          else
+            fallback()
+          end
+        end, { 'i', 's' }),
+        ['<s-tab>'] = cmp.mapping(function(fallback)
+          if cmp.visible() then
+            cmp.select_prev_item()
+          elseif luasnip.jumpable(-1) then
+            luasnip.jump(-1)
+          else
+            fallback()
+          end
+        end, { 'i', 's' }),
+        ['<cr>'] = cmp.mapping.confirm { select = true }, -- confirm selection
+        ['<c-space>'] = cmp.mapping.complete(), -- trigger completion manually
+        ['<c-e>'] = cmp.mapping.abort(), -- close the completion window
+      },
+      sources = cmp.config.sources({
+        { name = 'nvim_lsp' },
+        { name = 'luasnip' },
+      }, {
+        { name = 'buffer' },
+        { name = 'path' },
+      }),
+    }
+    cmp.setup.cmdline('/', {
+      mapping = cmp.mapping.preset.cmdline(),
+      sources = {
+        { name = 'buffer' },
+      },
+    })
+    cmp.setup.cmdline(':', {
+      mapping = cmp.mapping.preset.cmdline(),
+      sources = cmp.config.sources({
+        { name = 'path' },
+      }, {
+        { name = 'cmdline' },
+      }),
+    })
     vim.api.nvim_create_autocmd('LspAttach', {
       group = vim.api.nvim_create_augroup('kickstart-lsp-attach', { clear = true }),
       callback = function(event)
@@ -153,7 +215,8 @@ return {
     --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
     local servers = {
         clangd = {},
-        jdtls = {},
+        jdtls = {
+        },
         -- gopls = {},
       -- pyright = {},
       -- rust_analyzer = {},
