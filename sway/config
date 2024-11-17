@@ -51,6 +51,7 @@ input 1:1:AT_Translated_Set_2_keyboard xkb_layout it
     # Exit sway
     bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'    
 
+
     # Move your focus around
     bindsym $mod+$left focus left
     bindsym $mod+$down focus down
@@ -73,7 +74,7 @@ input 1:1:AT_Translated_Set_2_keyboard xkb_layout it
     bindsym $mod+Shift+Up move up
     bindsym $mod+Shift+Right move right
 
-    bindsym $mod+Space workspace next
+    bindsym $mod+Space focus next
 
     # Switch to workspace
     bindsym $mod+1 workspace number 1
@@ -166,11 +167,12 @@ bindsym $mod+r mode "resize"
 
 bar {
     position top
-
+    hidden_state hide
+    mode hide
     # When the status_command prints a new line to stdout, swaybar updates.
     # The default just shows the current date and time.
     status_command while date +'%Y-%m-%d %X'; do sleep 1; done
-
+    modifier $mod+Control
     swaybar_command waybar
 
     colors {

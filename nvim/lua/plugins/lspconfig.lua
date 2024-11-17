@@ -17,10 +17,12 @@ return {
     'hrsh7th/cmp-buffer', -- Buffer completions
     'hrsh7th/cmp-path', -- Path completions
     'hrsh7th/cmp-cmdline', -- Cmdline completions
+    'rafamadriz/friendly-snippets',
     'saadparwaiz1/cmp_luasnip', -- Snippet completions
-    'L3MON4D3/LuaSnip', -- Snippet engine
+    'L3MON4D3/LuaSnip'
 },
-  config = function()
+
+config = function()
     -- Brief aside: **What is LSP?**
     --
     -- LSP is an initialism you've probably heard, but might not understand what it is.
@@ -51,14 +53,20 @@ return {
     --    an lsp (for example, opening `main.rs` is associated with `rust_analyzer`) this
     --    function will be executed to configure the current buffer
     -- Setup for nvim-cmp
+    -- load snippets from path/of/your/nvim/config/my-cool-snippets
+    -- Set your custom snippets path
+
+    -- Load the snippets
+    
+    require("luasnip.loaders.from_vscode").lazy_load()
+
     local cmp = require('cmp')
     local luasnip = require('luasnip')
-
     -- nvim-cmp configuration
     cmp.setup {
       snippet = {
         expand = function(args)
-          luasnip.lsp_expand(args.body) -- snippet expansion
+            luasnip.lsp_expand(args.body) -- snippet expansion
         end,
       },
       mapping = {

@@ -31,8 +31,8 @@ seat seat0 xcursor_theme $cursor_theme $cursor_size
 font pango:$titlebar_font $titlebar_text_size
 
 # Property Name             Border  BG      Text    Indicator Child-border
-client.focused              #720018 #000000 #cc0018 #720018   #720018
-client.focused_inactive     #000000 #000000 #cc0018 #000000   #000000
-client.unfocused            #000000 #000000 #cc0018 #000000   #000000
+client.focused              #CCCCC7 #000000 #dd0018 #CCCCC7   #CCCCC7
+client.focused_inactive     #555552 #000000 #FFFFF7 #000000   #555552
+client.unfocused            #555552 #000000 #777777 #555552   #555552
 client.urgent               #2f343f #2f343f #d8dee8 #2f343f   #2f343f
 client.placeholder          #2f343f #2f343f #d8dee8 #2f343f   #2f343f
