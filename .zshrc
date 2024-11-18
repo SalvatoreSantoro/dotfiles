@@ -156,7 +156,7 @@ zle -N fcd
 # Bind CTRL+F to activate the fcd function
 bindkey '^F' fcd
 
-bindkey '^I^I' autosuggest-accept
+#bindkey '^I^I' autosuggest-accept
 
 
 # Enable highlighters

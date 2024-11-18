@@ -14,7 +14,7 @@ include ./output
 
 ### Idle configuration
 
-exec swayidle -w timeout 600 'systemctl suspend'
+exec swayidle -w timeout 900 'systemctl suspend'
 
 ### Input configuration
 

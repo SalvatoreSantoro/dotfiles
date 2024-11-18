@@ -6,4 +6,4 @@ else
 	echo "Virtual device already existing"
 fi
 obs --startvirtualcam > /dev/null 2>&1 &
-env XDG_SESSION_TYPE=x11 discord > /dev/null 2>&1  &
+env XDG_SESSION_TYPE=x11 discord --force-device-scale-factor=2.0 > /dev/null 2>&1  &
