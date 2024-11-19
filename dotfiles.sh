@@ -47,6 +47,8 @@ elif [[ "$operation" == "F" ]]; then
 			cp -r "$home_directory/$mod" "$current_directory"	
 		fi
 		echo "Copying $mod"
+    pacman -Qqen > "$current_directory/pkglist-repo.txt"
+    pacman -Qqem > "$current_directory/pkglist-aur.txt"
 	done
 
 	echo "$home_directory  => $current_directory"
