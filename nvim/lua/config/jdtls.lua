@@ -206,7 +206,7 @@ local function setup_jdtls()
                     staticThreshold = 9999
                 }
             },
-            -- How should different pieces of code be generated?
+            --How should different pieces of code be generated?
             codeGeneration = {
                 -- When generating toString use a json format
                 toString = {

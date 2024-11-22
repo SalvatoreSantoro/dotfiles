@@ -33,7 +33,7 @@ input 1:1:AT_Translated_Set_2_keyboard xkb_layout it
 
     # Start your launcher
     bindsym $mod+Shift+B exec $menu -show drun
-    
+
     # Keybinding to show clipboard history using rofi and copy the selection to clipboard
     #bindsym $mod+V exec cliphist list | rofi -dmenu | cliphist decode | wl-copy
     # Drag floating windows by holding down $mod and left mouse button.
