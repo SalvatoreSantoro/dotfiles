@@ -71,6 +71,9 @@ ZSH_THEME=
 
 plugins=(git fzf zsh-interactive-cd zsh-autosuggestions zsh-syntax-highlighting)
 
+
+export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
+
 source $ZSH/oh-my-zsh.sh
 
 source <(fzf --zsh)
@@ -123,7 +126,7 @@ alias remove="$scriptsHome/remove.sh"
 # ENV
 set -o vi
 export BROWSER="firefox"
-export ZDOTDIR="$HOME/.config/zsh"
+#export ZDOTDIR="$HOME/.config/zsh"
 
 # HISTORY
 
