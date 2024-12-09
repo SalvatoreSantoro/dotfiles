@@ -2,7 +2,7 @@ set $system_theme Breeze
 set $system_icons Papirus 
 set $system_dpi_scaling_factor 1.5
 
-set $cursor_size 28
+set $cursor_size 28 
 
 set $cursor_theme breeze_cursors
 set $titlebar_text_size 10
@@ -22,7 +22,10 @@ exec_always {
   gsettings set $gnome-schema icon-theme $system_icons
   gsettings set $gnome-schema cursor-theme $cursor_theme
   gsettings set $gnome-schema cursor-size $cursor_size
+  gsettings set $gnome-schema text-scaling-factor 1.0
+  #gsettings set $gnome-schema scaling-factor 1
 }
+
 
 # Mouse
 seat seat0 xcursor_theme $cursor_theme $cursor_size

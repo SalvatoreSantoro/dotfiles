@@ -12,7 +12,7 @@ return {
 		config = function()
 			-- ensure that we have lua language server, typescript launguage server, java language server, and java test language server are installed
 			require("mason-lspconfig").setup({
-				ensure_installed = { "lua_ls", "ts_ls", "jdtls", "clangd", "gopls" },
+				ensure_installed = { "lua_ls", "ts_ls", "jdtls", "clangd", "gopls", "html" },
 			})
 		end,
 	},
@@ -68,15 +68,19 @@ return {
 			})
 
 			-- setup the typescript language server
-			--lspconfig.ts_ls.setup({
-			--    capabilities = capabilities,
-			--})
+			lspconfig.ts_ls.setup({
+				capabilities = capabilities,
+			})
 
 			lspconfig.gopls.setup({
 				capabilities = capabilities,
 			})
 
 			lspconfig.clangd.setup({
+				capabilites = capabilities,
+			})
+
+			lspconfig.html.setup({
 				capabilites = capabilities,
 			})
 			-- Set vim motion for <Space> + c + h to show code documentation about the code the cursor is currently over if available
@@ -103,7 +107,7 @@ return {
 			vim.keymap.set("n", "<leader>cR", vim.lsp.buf.rename, { desc = "[C]ode [R]ename" })
 			-- Set a vim motion for <Space> + c + <Shift>D to go to where the code/object was declared in the project (class file)
 			vim.keymap.set("n", "<leader>cD", vim.lsp.buf.declaration, { desc = "[C]ode Goto [D]eclaration" })
-            vim.keymap.set("n", "<leader>cE", vim.diagnostic.open_float, { desc = "[C]ode [E]rror diagnostics"})
+			vim.keymap.set("n", "<leader>cE", vim.diagnostic.open_float, { desc = "[C]ode [E]rror diagnostics" })
 		end,
 	},
 }
