@@ -100,6 +100,7 @@ sof-firmware
 sway
 swaybg
 swayidle
+swaync
 systemsettings
 texinfo
 tree
