@@ -2,6 +2,8 @@
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
+opts = {noremap = true, silent = true}
+
 vim.keymap.set('n', "<Esc>", "<cmd>nohlsearch<CR>", { desc = "Remove search highlights"})
 
 
@@ -12,7 +14,6 @@ vim.keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" }
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 -- For conciseness local opts = { noremap = true, silent = false }
 
-local opts = { noremap = true, silent = true}
 
 vim.keymap.set('n', '<leader>e', ':Neotree toggle position=left<CR>', opts)
 
@@ -62,10 +63,10 @@ vim.keymap.set('n', '<leader>x', ':bdelete<CR>', opts) -- close buffer
 vim.keymap.set('n', '<leader>b', '<cmd> enew <CR>', opts) -- new buffer
 
 -- Window management
-vim.keymap.set('n', '<leader>wv', '<C-w>v', opts, { desc = "[W]indow Split [V]ertical" }) -- split window vertically
-vim.keymap.set('n', '<leader>wh', '<C-w>s', opts, { desc = "[W]indow Split [H]orizontal" }) -- split window horizontally
-vim.keymap.set('n', '<leader>se', '<C-w>=', opts) -- make split windows equal width & height
-vim.keymap.set('n', '<leader>wc', ':close<CR>', opts, { desc = "[W]indow Split [C]orizontal" }) -- close current split window
+vim.keymap.set('n', '<leader>wv', '<C-w>v', { desc = "[W]indow Split [V]ertical", noremap = true, silent = true}) -- split window vertically
+vim.keymap.set('n', '<leader>wh', '<C-w>s', { desc = "[W]indow Split [H]orizontal", noremap = true, silent = true}) -- split window horizontally
+vim.keymap.set('n', '<leader>we', '<C-w>=', { desc = "[W]indow Split [E]qual", noremap = true, silent = true}) -- make split windows equal width & height
+vim.keymap.set('n', '<leader>wc', ':close<CR>', { desc = "[W]indow Split [C]orizontal", noremap = true, silent = true }) -- close current split window
 
 -- Navigate between splits
 vim.keymap.set('n', '<C-k>', ':wincmd k<CR>', opts)
@@ -74,13 +75,13 @@ vim.keymap.set('n', '<C-h>', ':wincmd h<CR>', opts)
 vim.keymap.set('n', '<C-l>', ':wincmd l<CR>', opts)
 
 -- Tabs
-vim.keymap.set('n', '<leader>to', ':tabnew<CR>', opts) -- open new tab
-vim.keymap.set('n', '<leader>tx', ':tabclose<CR>', opts) -- close current tab
-vim.keymap.set('n', '<leader>tn', ':tabn<CR>', opts) --  go to next tab
-vim.keymap.set('n', '<leader>tp', ':tabp<CR>', opts) --  go to previous tab
+vim.keymap.set('n', '<leader>to', ':tabnew<CR>', {desc = "[T]ab [O]pen", noremap = true, silent = true}) -- open new tab
+vim.keymap.set('n', '<leader>tx', ':tabclose<CR>', {desc = "[T]ab [C]lose", noremap = true, silent = true}) -- close current tab
+vim.keymap.set('n', '<leader>tn', ':tabn<CR>', {desc = "[T]ab [N]ext", noremap = true, silent = true}) --  go to next tab
+vim.keymap.set('n', '<leader>tp', ':tabp<CR>', {desc = "[T]ab [P]revious", noremap = true, silent = true}) --  go to previous tab
 
 -- Toggle line wrapping
-vim.keymap.set('n', '<leader>lw', '<cmd>set wrap!<CR>', opts)
+vim.keymap.set('n', '<leader>lw', '<cmd>set wrap!<CR>',{desc = "[L]ine [W]rap toggle", noremap = true, silent = true})
 
 -- Stay in indent mode
 vim.keymap.set('v', '<', '<gv', opts)

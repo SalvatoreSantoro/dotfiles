@@ -12,7 +12,7 @@ return {
 		config = function()
 			-- ensure that we have lua language server, typescript launguage server, java language server, and java test language server are installed
 			require("mason-lspconfig").setup({
-				ensure_installed = { "lua_ls", "ts_ls", "jdtls", "clangd", "gopls", "html" },
+				ensure_installed = { "lua_ls", "ts_ls", "jdtls", "clangd", "gopls", "html", "jsonls" },
 			})
 		end,
 	},
@@ -77,11 +77,15 @@ return {
 			})
 
 			lspconfig.clangd.setup({
-				capabilites = capabilities,
+				capabilities = capabilities,
 			})
 
 			lspconfig.html.setup({
-				capabilites = capabilities,
+				capabilities = capabilities,
+			})
+
+			lspconfig.jsonls.setup({
+				capabilities = capabilities,
 			})
 			-- Set vim motion for <Space> + c + h to show code documentation about the code the cursor is currently over if available
 			vim.keymap.set("n", "<leader>ch", vim.lsp.buf.hover, { desc = "[C]ode [H]over Documentation" })

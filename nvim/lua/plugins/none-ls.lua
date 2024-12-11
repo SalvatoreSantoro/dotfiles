@@ -27,7 +27,7 @@ return {
 				-- setup lua formatter
 				null_ls.builtins.formatting.stylua,
 				-- setup eslint linter for javascript
-				require("none-ls.diagnostics.eslint_d"),
+				-- require("none-ls.diagnostics.eslint_d"),
 				-- setup prettier to format languages that are not lua
 				null_ls.builtins.formatting.prettierd.with({
 					extra_args = function(params)

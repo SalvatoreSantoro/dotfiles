@@ -26,6 +26,14 @@ return {
 			{ "<leader>g_", hidden = true },
 			{ "<leader>w", group = "[W]indow" },
 			{ "<leader>w_", hidden = true },
+			{ "<leader>l", group = "[L]ine" },
+			{ "<leader>l_", hidden = true },
+            { "<leader>t", group = "[T]ab" },
+			{ "<leader>t_", hidden = true },
+            { "<leader>s", group = "[S]earch" },
+			{ "<leader>s_", hidden = true },
+            { "<leader>f", group = "[F]ind" },
+			{ "<leader>f_", hidden = true },
 		})
 	end,
 }
