@@ -5,13 +5,13 @@ export ELECTRON_OZONE_PLATFORM_HINT=auto
 export QT_QPA_PLATFORM=wayland
 #export QT_SCALE_FACTOR=1
 #export QT_WAYLAND_FORCE_DPI="physical" 
-export QT_QPA_PLATFORMTHEME=qt6ct
+#export QT_QPA_PLATFORMTHEME=qt6ct
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time Oh My Zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="catppuccin"
-CATPPUCCIN_FLAVOR="macchiato"
+#ZSH_THEME="catppuccin"
+#CATPPUCCIN_FLAVOR="mocha"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load

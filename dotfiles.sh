@@ -21,7 +21,7 @@ echo "           "
 
 home_directory="$HOME/.config"
 current_directory="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-modules=(".zshrc" "sway" "hypr" "kitty" "neofetch" "rofi" "waybar" "wallpapers" "nvim" "swaync")
+modules=(".zshrc" "sway" "hypr" "kitty" "neofetch" "rofi" "waybar" "wallpapers" "nvim" "swaync" "wofi")
 
 read operation
 

@@ -1,13 +1,14 @@
 {
-  "margin-top" : 5,
+  "margin-top" : 1,
+  "margin-bottom": 5,
     "margin-left": 10,
     "margin-right": 10,
-    "height" : 30,
+    "height" : 12,
     "modules-left": [
-      "sway/window"
+      "hyprland/window"
     ],
     "modules-center": [
-      "sway/workspaces",
+      "hyprland/workspaces",
     ],
     "modules-right": [
     "pulseaudio",
@@ -16,7 +17,7 @@
     "battery",
     "clock",
     ],
-    "sway/window": {
+    "hyprland/window": {
       "format": "{}",
       "max-length": 35,
       "rewrite": {
@@ -24,12 +25,19 @@
       },
       "separate-outputs": true,
     },
-    "sway/workspaces": {
+    "hyprland/workspaces": {
       "format": "{icon}",
       "on-click": "activate",
       "format-icons": {
         "active": " ",
       },
+       "window-rewrite": {
+    "title<.*youtube.*>": "", // Windows whose titles contain "youtube"
+    "class<firefox>": "", // Windows whose classes are "firefox"
+    "class<firefox> title<.*github.*>": "", // Windows whose class is "firefox" and title contains "github". Note that "class" always comes first.
+    "foot": "", // Windows that contain "foot" in either class or title. For optimization reasons, it will only match against a title if at least one other window explicitly matches against a title.
+    "code": "󰨞",
+	},
       "sort-by-number": true,
       //"persistent-workspaces": {
       //  "*": 4, // 5 workspaces by default on every monitor

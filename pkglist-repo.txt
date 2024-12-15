@@ -24,6 +24,8 @@ go
 grim
 grub
 htop
+hyprland
+hyprpaper
 intel-ucode
 jq
 kactivitymanagerd
@@ -64,7 +66,7 @@ neofetch
 neovim
 networkmanager
 npm
-nvidia-open
+nvidia
 obs-studio
 obsidian
 ocean-sound-theme
@@ -119,6 +121,7 @@ wacomtablet
 waybar
 wofi
 xdg-desktop-portal-gtk
+xdg-desktop-portal-hyprland
 xdg-desktop-portal-kde
 xdg-desktop-portal-wlr
 zsh
