@@ -6,7 +6,7 @@ set $cursor_size 28
 
 set $cursor_theme breeze_cursors
 set $titlebar_text_size 11
-set $font 'JetBrainsMono Nerd Font' 
+set $font 'JetBrainsMono Nerd' 
 
 
 output eDP-1 resolution 1920x1080 scale $system_dpi_scaling_factor
