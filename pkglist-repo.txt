@@ -21,9 +21,11 @@ fzf
 gimp
 git
 go
+grim
 grub
 htop
 intel-ucode
+jq
 kactivitymanagerd
 kde-cli-tools
 kde-gtk-config
@@ -93,9 +95,12 @@ polkit-kde-agent
 powerdevil
 print-manager
 qqc2-breeze-style
+qt5-quickcontrols2
 qt5ct
+qt6ct
 rofi
 sddm-kcm
+slurp
 sof-firmware
 sway
 swaybg
@@ -105,6 +110,7 @@ systemsettings
 texinfo
 tree
 ttf-font-awesome
+ttf-jetbrains-mono-nerd
 ufw
 unzip
 v4l2loopback-dkms

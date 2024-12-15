@@ -5,8 +5,10 @@ set $system_dpi_scaling_factor 1.5
 set $cursor_size 28 
 
 set $cursor_theme breeze_cursors
-set $titlebar_text_size 10
-set $titlebar_font Noto Sans Kannada
+set $titlebar_text_size 11
+set $titlebar_font JetBrains Mono Nerd Font 
+
+
 
 output * bg ~/.config/wallpapers/1.png fill
 
@@ -15,6 +17,7 @@ output eDP-1 resolution 1920x1080 scale $system_dpi_scaling_factor
 #set $opacity 0.9
 #for_window [class="$term"] opacity $opacity
 #for_window [app_id=".*"] opacity $opacity
+
 
 set $gnome-schema org.gnome.desktop.interface
 exec_always {
@@ -31,11 +34,17 @@ exec_always {
 seat seat0 xcursor_theme $cursor_theme $cursor_size
 
 # Font and size for title bar
+
 font pango:$titlebar_font $titlebar_text_size
 
-# Property Name             Border  BG      Text    Indicator Child-border
-client.focused              #CCCCC7 #000000 #dd0018 #CCCCC7   #CCCCC7
-client.focused_inactive     #555552 #000000 #FFFFF7 #000000   #555552
-client.unfocused            #555552 #000000 #777777 #555552   #555552
-client.urgent               #2f343f #2f343f #d8dee8 #2f343f   #2f343f
-client.placeholder          #2f343f #2f343f #d8dee8 #2f343f   #2f343f
+set $cl_high #b4befe
+set $cl_indi #9399b2
+set $cl_back #1e1e2e
+set $cl_fore #181926
+set $cl_urge #f38ba8
+
+# Colors                border   bg       text     indi     childborder
+client.focused          $cl_high $cl_high $cl_fore $cl_indi $cl_high
+client.focused_inactive $cl_back $cl_back $cl_fore $cl_back $cl_back
+client.unfocused        $cl_back $cl_back $cl_indi $cl_back $cl_back
+client.urgent           $cl_urge $cl_urge $cl_fore $cl_urge $cl_urge

@@ -1,13 +1,17 @@
 # ZSH
 export ZSH="$HOME/.oh-my-zsh"
 export FZF_BASE="/usr/bin/fzf"
-#export QT_WAYLAND_FORCE_DPI="physical"
-
+export ELECTRON_OZONE_PLATFORM_HINT=auto
+export QT_QPA_PLATFORM=wayland
+#export QT_SCALE_FACTOR=1
+#export QT_WAYLAND_FORCE_DPI="physical" 
+export QT_QPA_PLATFORMTHEME=qt6ct
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time Oh My Zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME=
+ZSH_THEME="catppuccin"
+CATPPUCCIN_FLAVOR="macchiato"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -167,25 +171,25 @@ bindkey '^F' fcd
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern)
 
 # Override highlighter colors
-ZSH_HIGHLIGHT_STYLES[default]=none
-ZSH_HIGHLIGHT_STYLES[unknown-token]=fg=001
-ZSH_HIGHLIGHT_STYLES[reserved-word]=fg=white
-ZSH_HIGHLIGHT_STYLES[alias]=fg=white
-ZSH_HIGHLIGHT_STYLES[builtin]=fg=white,bold
-ZSH_HIGHLIGHT_STYLES[function]=fg=white,bold
-ZSH_HIGHLIGHT_STYLES[command]=fg=001
-ZSH_HIGHLIGHT_STYLES[precommand]=fg=red
-ZSH_HIGHLIGHT_STYLES[commandseparator]=fg=red
-ZSH_HIGHLIGHT_STYLES[hashed-command]=fg=white
-ZSH_HIGHLIGHT_STYLES[path]=fg=white
-ZSH_HIGHLIGHT_STYLES[globbing]=fg=white
-ZSH_HIGHLIGHT_STYLES[history-expansion]=fg=white,underline
-ZSH_HIGHLIGHT_STYLES[single-hyphen-option]=none
-ZSH_HIGHLIGHT_STYLES[double-hyphen-option]=none
-ZSH_HIGHLIGHT_STYLES[back-quoted-argument]=none
-ZSH_HIGHLIGHT_STYLES[single-quoted-argument]=fg=white
-ZSH_HIGHLIGHT_STYLES[double-quoted-argument]=fg=white
-ZSH_HIGHLIGHT_STYLES[dollar-double-quoted-argument]=fg=white
-ZSH_HIGHLIGHT_STYLES[back-double-quoted-argument]=fg=white
-ZSH_HIGHLIGHT_STYLES[assign]=fg=white
-ZSH_HIGHLIGHT_STYLES[fd]=fg=white
+# ZSH_HIGHLIGHT_STYLES[default]=none
+# ZSH_HIGHLIGHT_STYLES[unknown-token]=fg=001
+# ZSH_HIGHLIGHT_STYLES[reserved-word]=fg=white
+# ZSH_HIGHLIGHT_STYLES[alias]=fg=white
+# ZSH_HIGHLIGHT_STYLES[builtin]=fg=white,bold
+# ZSH_HIGHLIGHT_STYLES[function]=fg=white,bold
+# ZSH_HIGHLIGHT_STYLES[command]=fg=001
+# ZSH_HIGHLIGHT_STYLES[precommand]=fg=red
+# ZSH_HIGHLIGHT_STYLES[commandseparator]=fg=red
+# ZSH_HIGHLIGHT_STYLES[hashed-command]=fg=white
+# ZSH_HIGHLIGHT_STYLES[path]=fg=white
+# ZSH_HIGHLIGHT_STYLES[globbing]=fg=white
+# ZSH_HIGHLIGHT_STYLES[history-expansion]=fg=white,underline
+# ZSH_HIGHLIGHT_STYLES[single-hyphen-option]=none
+# ZSH_HIGHLIGHT_STYLES[double-hyphen-option]=none
+# ZSH_HIGHLIGHT_STYLES[back-quoted-argument]=none
+# ZSH_HIGHLIGHT_STYLES[single-quoted-argument]=fg=white
+# ZSH_HIGHLIGHT_STYLES[double-quoted-argument]=fg=white
+# ZSH_HIGHLIGHT_STYLES[dollar-double-quoted-argument]=fg=white
+# ZSH_HIGHLIGHT_STYLES[back-double-quoted-argument]=fg=white
+# ZSH_HIGHLIGHT_STYLES[assign]=fg=white
+# ZSH_HIGHLIGHT_STYLES[fd]=fg=white

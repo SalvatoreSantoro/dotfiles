@@ -1,4 +1,5 @@
 # Logo key. Use Mod1 for Alt.
+set $config_dir ~/.config/sway
 set $mod Super
 
 set $left h
@@ -9,3 +10,5 @@ set $right l
 set $term kitty
 set $menu rofi
 set $browser firefox
+
+set $fileManager QT_QPA_PLATFORMTHEME=kde dolphin

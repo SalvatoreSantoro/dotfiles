@@ -4,9 +4,23 @@ include /etc/sway/config.d/*
 
 exec wl-paste --type text --watch cliphist store
 
+exec swaymsg border none
+
+
+set $flavor macchiato
+set $version v0.2.0
+exec_always if [ ! -f ~/.config/swaync/style.css ]; then $(mkdir -p ~/.config/swaync && curl -L https://github.com/catppuccin/swaync/releases/download/$version/$flavor.css -o ~/.config/swaync/style.css); fi
+
+
+# Notification Daemon
+exec swaync
+
 ### Variables
 
 include ./variables
+
+# Toggle control center
+bindsym $mod+n exec swaync-client -t -sw
 
 ### Output configuration
 
@@ -26,13 +40,17 @@ input 1:1:AT_Translated_Set_2_keyboard xkb_layout it
     bindsym $mod+Q exec $term
 
     # Start Browser
-    bindsym $mod+B exec $browser
+    bindsym $mod+B exec MOZ_ENABLE_WAYLAND=1 $browser
 
     # Kill focused window
     bindsym $mod+Shift+A kill
 
     # Start your launcher
     bindsym $mod+Shift+B exec $menu -show drun
+
+    bindsym $mod+D exec $fileManager
+
+    bindsym Print exec $config_dir/scripts/screenshot.sh 
 
     # Keybinding to show clipboard history using rofi and copy the selection to clipboard
     #bindsym $mod+V exec cliphist list | rofi -dmenu | cliphist decode | wl-copy
@@ -51,6 +69,7 @@ input 1:1:AT_Translated_Set_2_keyboard xkb_layout it
     # Exit sway
     bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'    
 
+    
 
     # Move your focus around
     bindsym $mod+$left focus left
@@ -163,14 +182,11 @@ bindsym $mod+r mode "resize"
     bindsym --locked XF86MonBrightnessDown exec brightnessctl set 5%-
     bindsym --locked XF86MonBrightnessUp exec brightnessctl set 5%+
     # Special key to take a screenshot with grim
-    bindsym Print exec grim
 
 bar {
     position top
-    hidden_state hide
-    mode hide
-    # When the status_command prints a new line to stdout, swaybar updates.
-    # The default just shows the current date and time.
+    #hidden_state hide
+    #mode hide
     status_command while date +'%Y-%m-%d %X'; do sleep 1; done
     modifier $mod+Control
     swaybar_command waybar
