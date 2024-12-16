@@ -1,8 +1,8 @@
 # ZSH
 export ZSH="$HOME/.oh-my-zsh"
 export FZF_BASE="/usr/bin/fzf"
-export ELECTRON_OZONE_PLATFORM_HINT=auto
-export QT_QPA_PLATFORM=wayland
+#export ELECTRON_OZONE_PLATFORM_HINT=auto
+#export QT_QPA_PLATFORM=wayland
 #export QT_SCALE_FACTOR=1
 #export QT_WAYLAND_FORCE_DPI="physical" 
 #export QT_QPA_PLATFORMTHEME=qt6ct

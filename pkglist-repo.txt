@@ -98,15 +98,13 @@ powerdevil
 print-manager
 qqc2-breeze-style
 qt5-quickcontrols2
+qt5-wayland
 qt5ct
 qt6ct
 rofi
 sddm-kcm
 slurp
 sof-firmware
-sway
-swaybg
-swayidle
 swaync
 systemsettings
 texinfo
