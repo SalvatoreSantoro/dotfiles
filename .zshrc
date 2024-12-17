@@ -5,7 +5,7 @@ export FZF_BASE="/usr/bin/fzf"
 #export QT_QPA_PLATFORM=wayland
 #export QT_SCALE_FACTOR=1
 #export QT_WAYLAND_FORCE_DPI="physical" 
-#export QT_QPA_PLATFORMTHEME=qt6ct
+#export QT_QPA_PLATFORMTHEME=qt5ct
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time Oh My Zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -38,13 +38,13 @@ export FZF_BASE="/usr/bin/fzf"
 # DISABLE_MAGIC_FUNCTIONS="true"
 
 # Uncomment the following line to disable colors in ls.
-# DISABLE_LS_COLORS="true"
+#DISABLE_LS_COLORS="true"
 
 # Uncomment the following line to disable auto-setting terminal title.
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
+#ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # You can also set it to another string to have that shown instead of the default red dots.
@@ -90,8 +90,6 @@ source <(fzf --zsh)
 
 # You may need to manually set your language environment
 export LANG=it_IT.UTF-8
-#export XCURSOR_THEME=Breeze-Dark
-#export XCURSOR_SIZE=10
 
 
 # Preferred editor for local and remote sessions
