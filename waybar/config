@@ -16,6 +16,7 @@
     "temperature",
     "battery",
     "clock",
+    "tray",
     ],
     "hyprland/window": {
       "format": "{}",
@@ -29,24 +30,16 @@
       "format": "{icon}",
       "on-click": "activate",
       "format-icons": {
-        "active": " ",
+        "active": "󱗿",
       },
-       "window-rewrite": {
-    "title<.*youtube.*>": "", // Windows whose titles contain "youtube"
-    "class<firefox>": "", // Windows whose classes are "firefox"
-    "class<firefox> title<.*github.*>": "", // Windows whose class is "firefox" and title contains "github". Note that "class" always comes first.
-    "foot": "", // Windows that contain "foot" in either class or title. For optimization reasons, it will only match against a title if at least one other window explicitly matches against a title.
-    "code": "󰨞",
-	},
       "sort-by-number": true,
-      //"persistent-workspaces": {
-      //  "*": 4, // 5 workspaces by default on every monitor
-      //  "HDMI-A-1": 3 // but only three on HDMI-A-1
-      //},
     },
     "clock": {
       "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
       "format-alt": "{:%Y-%m-%d}"
+    },
+    "tray": {
+        "spacing": 10
     },
     "cpu": {
       "format": "  {usage}%",

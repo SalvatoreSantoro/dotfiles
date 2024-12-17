@@ -34,7 +34,7 @@ button:hover {
 #workspaces button {
   padding: 0 5px;
   background-color: transparent;
-  color: #ffffff;
+  color: @shappire;
 }
 
 
@@ -54,10 +54,12 @@ button:hover {
   background-color: #eb4d4b;
 }
 
+
 #mode {
   background-color: #64727D;
   box-shadow: inset 0 -3px #ffffff;
 }
+
 
 #clock,
 #battery,
@@ -140,4 +142,12 @@ label:focus {
 
 #pulseaudio.muted {
   color: @text;
+}
+
+#tray {
+  border-radius: 4px;
+  margin: 6px 3px;
+  padding: 6px 6px;
+  background-color: @base;
+  color: @shappire;
 }
