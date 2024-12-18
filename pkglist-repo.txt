@@ -11,6 +11,7 @@ discord
 discover
 docker
 docker-compose
+dolphin
 drkonqi
 efibootmgr
 fd
@@ -62,7 +63,6 @@ man-pages
 maven
 milou
 nano
-nemo
 neofetch
 neovim
 networkmanager
@@ -101,7 +101,6 @@ print-manager
 qqc2-breeze-style
 qt5-quickcontrols2
 qt5-wayland
-qt6ct
 rofi
 sddm-kcm
 slurp
@@ -121,7 +120,5 @@ waybar
 wofi
 xdg-desktop-portal-gtk
 xdg-desktop-portal-hyprland
-xdg-desktop-portal-kde
-xdg-desktop-portal-wlr
 yazi
 zsh

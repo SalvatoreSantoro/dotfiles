@@ -146,8 +146,8 @@ label:focus {
 
 #tray {
   border-radius: 4px;
-  margin: 6px 3px;
-  padding: 6px 6px;
+  margin: 2px 2px;
+  padding: 2px 2px;
   background-color: @base;
   color: @shappire;
 }
