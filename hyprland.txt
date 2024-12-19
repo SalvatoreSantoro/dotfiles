@@ -5,3 +5,5 @@ install:
 4 - hyprutils
 5 - hyprwayland-scanner
 6 - xdg-desktop-portal-hyprland
+
+rimossi sddm-kcm sddm per utilizzare uwsm

@@ -21,13 +21,15 @@ echo "           "
 
 home_directory="$HOME/.config"
 current_directory="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-modules=(".zshrc" "sway" "hypr" "kitty" "neofetch" "rofi" "waybar" "wallpapers" "nvim" "swaync" "wofi")
+modules=(".zshrc" ".zprofile" "sway" "hypr" "kitty" "neofetch" "rofi" "waybar" "wallpapers" "nvim" "swaync" "wofi" "fuzzel")
 
 read operation
 
 if [[ "$operation" == "I" ]]; then
 	for mod in "${modules[@]}"; do
                 if [[ "$mod" == ".zshrc" ]];then
+			cp "$current_directory/$mod" "$HOME"
+                elif [[ "$mod" == ".zprofile" ]];then
 			cp "$current_directory/$mod" "$HOME"
 		else	
                 	cp -r "$current_directory/$mod" "$home_directory"        
