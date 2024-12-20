@@ -1,4 +1,7 @@
 catppuccin-cursors-mocha
+catppuccin-gtk-theme-mocha
+gtk-theme-windows10-dark
 papirus-folders-catppuccin-git
+uwsm
 yay
 yay-debug
