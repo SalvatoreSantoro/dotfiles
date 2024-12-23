@@ -1,23 +1,15 @@
-set $system_theme Breeze 
+set $system_theme 'catppuccin-mocha-sapphire-standard+default' 
 set $system_icons Papirus 
-set $system_dpi_scaling_factor 1.5
+set $system_dpi_scaling_factor 1
 
 set $cursor_size 28 
-
-set $cursor_theme breeze_cursors
+set $cursor_theme 'Catppuccin Mocha Sapphire'
 set $titlebar_text_size 11
-set $font 'JetBrainsMono Nerd' 
-
+set $font 'JetBrainsMono Nerd Font' 
 
 output eDP-1 resolution 1920x1080 scale $system_dpi_scaling_factor
 
 output * bg ~/.config/wallpapers/1.png fill
-
-
-#set $opacity 0.9
-#for_window [class="$term"] opacity $opacity
-#for_window [app_id=".*"] opacity $opacity
-
 
 set $gnome-schema org.gnome.desktop.interface
 exec_always {
@@ -25,14 +17,13 @@ exec_always {
   gsettings set $gnome-schema icon-theme $system_icons
   gsettings set $gnome-schema cursor-theme $cursor_theme
   gsettings set $gnome-schema cursor-size $cursor_size
-  gsettings set $gnome-schema text-scaling-factor 1.0
+  gsettings set $gnome-schema text-scaling-factor 1.2
   gsettings set $gnome-schema document-font-name $font 
   gsettings set $gnome-schema font-name $font 
   gsettings set $gnome-schema monospace-font-name $font 
   gsettings set org.gnome.nautilus.desktop font $font 
   #gsettings set $gnome-schema scaling-factor 1
 }
-#
 for_window [class=".*"] border pixel 1
 
 # Mouse
@@ -40,7 +31,7 @@ seat seat0 xcursor_theme $cursor_theme $cursor_size
 
 # Font and size for title bar
 
-font pango:$titlebar_font $titlebar_text_size
+#font pango:$titlebar_font $titlebar_text_size
 
 set $cl_high #b4befe
 set $cl_indi #9399b2

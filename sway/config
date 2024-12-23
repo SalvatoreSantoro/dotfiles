@@ -2,6 +2,8 @@
 
 include /etc/sway/config.d/*
 
+
+
 exec wl-paste --type text --watch cliphist store
 
 
@@ -44,7 +46,7 @@ input 1:1:AT_Translated_Set_2_keyboard xkb_layout it
     bindsym $mod+Shift+A kill
 
     # Start your launcher
-    bindsym $mod+Shift+B exec $menu -show drun
+    bindsym $mod+Shift+B exec $menu --show drun
 
     bindsym $mod+D exec $fileManager
 
@@ -195,5 +197,3 @@ bar {
         inactive_workspace #32323200 #32323200 #5c5c5c
     }
 }
-
-

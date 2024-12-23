@@ -8,7 +8,7 @@ set $up k
 set $right l
 
 set $term kitty
-set $menu rofi
+set $menu wofi
 set $browser firefox
 
-set $fileManager QT_QPA_PLATFORMTHEME=kde dolphin
+set $fileManager thunar 

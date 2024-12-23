@@ -20,8 +20,7 @@ grim
 grub
 gtk4
 htop
-hyprland
-hyprpaper
+hyprwayland-scanner
 intel-ucode
 jq
 kitty
@@ -49,6 +48,7 @@ otf-font-awesome
 pavucontrol
 pipewire-alsa
 pipewire-pulse
+podman
 qt5-quickcontrols2
 qt5-wayland
 qt5ct
@@ -56,6 +56,9 @@ qt6ct
 slurp
 sof-firmware
 steam
+sway
+swaybg
+swaylock
 swaync
 texinfo
 thunar
@@ -69,6 +72,7 @@ v4l2loopback-utils
 waybar
 wofi
 xdg-desktop-portal-gtk
-xdg-desktop-portal-hyprland
+xdg-desktop-portal-wlr
+xorg-xwayland
 yazi
 zsh

@@ -124,6 +124,7 @@ alias run_discord="$scriptsHome/run_discord.sh"
 alias docker_psa="$scriptsHome/docker_psa.sh"
 alias docker_stop_all="$scriptsHome/docker_stop_all.sh"
 alias remove="$scriptsHome/remove.sh"
+alias sway_launch="$scriptsHome/sway_launcher.sh"
 
 
 # ENV
