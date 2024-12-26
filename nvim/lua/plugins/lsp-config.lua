@@ -77,6 +77,10 @@ return {
 			})
 
 			lspconfig.clangd.setup({
+				cmd = {
+					"clangd",
+					"--fallback-style=webkit",
+				},
 				capabilities = capabilities,
 			})
 
@@ -112,7 +116,7 @@ return {
 			-- Set a vim motion for <Space> + c + <Shift>D to go to where the code/object was declared in the project (class file)
 			vim.keymap.set("n", "<leader>cD", vim.lsp.buf.declaration, { desc = "[C]ode Goto [D]eclaration" })
 			vim.keymap.set("n", "<leader>cE", vim.diagnostic.open_float, { desc = "[C]ode [E]rror diagnostics" })
-            vim.keymap.set("n", "<leader>ss", vim.lsp.buf.signature_help, { desc="Signature hint"})
+			vim.keymap.set("n", "<leader>ss", vim.lsp.buf.signature_help, { desc = "Signature hint" })
 		end,
 	},
 }

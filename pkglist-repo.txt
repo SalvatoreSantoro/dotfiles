@@ -20,6 +20,9 @@ grim
 grub
 gtk4
 htop
+hyprland
+hyprland-qtutils
+hyprpaper
 hyprwayland-scanner
 intel-ucode
 jq
@@ -56,9 +59,7 @@ qt6ct
 slurp
 sof-firmware
 steam
-sway
 swaybg
-swaylock
 swaync
 texinfo
 thunar
@@ -69,10 +70,11 @@ ufw
 unzip
 v4l2loopback-dkms
 v4l2loopback-utils
+valgrind
 waybar
 wofi
 xdg-desktop-portal-gtk
-xdg-desktop-portal-wlr
+xdg-desktop-portal-hyprland
 xorg-xwayland
 yazi
 zsh
