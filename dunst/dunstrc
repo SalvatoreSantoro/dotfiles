@@ -1,0 +1,47 @@
+# See dunst(5) for all configuration options
+
+[global]
+frame_color = "#89b4fa"
+separator_color = frame
+highlight = "#89b4fa"
+width = (0,400)
+height = (0,300)
+offset = 10x10
+#timeout = 3
+padding = 10
+horizontal_padding = 10
+text_icon_padding = 18
+frame_width = 2
+font = JetBrainsMono Nerd Font, 15
+markup = full
+format = "<b>%s</b>\n%b %a"
+alignment = center
+vertical_alignment = center
+min_icon_size = 0
+max_icon_size = 20
+#icon_path = /usr/share/icons/Adwaita
+corner_radius = 10
+
+[urgency_low]
+background = "#1e1e2e"
+foreground = "#cdd6f4"
+#new_icon
+
+[urgency_normal]
+background = "#1e1e2e"
+foreground = "#cdd6f4"
+
+[urgency_critical]
+background = "#1e1e2e"
+foreground = "#cdd6f4"
+frame_color = "#fab387"
+
+[history-ignore1]
+appname = 'Volume changed'
+history_ignore = yes
+
+[history-ignore2]
+appname = 'Brightness changed'
+history_ignore = yes
+
+

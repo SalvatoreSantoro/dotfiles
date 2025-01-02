@@ -8,6 +8,7 @@ d-spy
 discord
 docker
 docker-compose
+dunst
 efibootmgr
 fd
 firefox
@@ -40,7 +41,6 @@ man-db
 man-pages
 maven
 nano
-nautilus
 neofetch
 neovim
 networkmanager
@@ -64,8 +64,8 @@ qt6ct
 slurp
 sof-firmware
 steam
-swaync
 texinfo
+thunar
 tree
 ttf-font-awesome
 ttf-jetbrains-mono-nerd
