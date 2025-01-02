@@ -5,13 +5,8 @@
 #
 # NOTE: this script uses bash (not POSIX shell) for the RANDOM variable
 
-if [[ $# -lt 1 ]] || [[ ! -d $1   ]]; then
-	echo "Usage:
-	$0 <dir containing images>"
-	exit 1
-fi
-
 # This controls (in seconds) when to switch to the next image
+#sleep 2
 INTERVAL=300
 MONITOR=eDP-1
 
@@ -23,8 +18,9 @@ while true; do
 		| sort -n | cut -d':' -f2- \
 		| while read -r img; do
             if [[ "$img" != "$1" ]]; then
-                hyprctl hyprpaper preload "$img"
-                hyprctl hyprpaper wallpaper "$MONITOR,$img"
+                uwsm app -- hyprctl hyprpaper preload "$img"
+                uwsm app -- hyprctl hyprpaper wallpaper "$MONITOR,$img"
+                uwsm app -- hyprctl hyprpaper unload "$img" 
 			    sleep $INTERVAL
             fi 
 		done
