@@ -6,4 +6,5 @@ echo "$RANDOM_FILE"
 uwsm app -- hyprctl hyprpaper preload "$RANDOM_FILE"
 uwsm app -- hyprctl hyprpaper wallpaper "$MONITOR,$RANDOM_FILE"
 uwsm app -- hyprctl hyprpaper unload "$RANDOM_FILE" 
+#uwsm app -- wal -i "$RANDOM_FILE"
        

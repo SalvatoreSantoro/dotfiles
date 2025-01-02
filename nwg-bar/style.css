@@ -1,0 +1,38 @@
+/* Updated CSS using Catppuccin Mocha color palette */
+
+window {
+    background-color: rgba(30, 30, 46, 1.0); /* Base (mantle) */
+    border-radius: 15px; /* Rounded corners */
+}
+
+/* Outer bar container, takes all the window width/height */
+#outer-box {
+    margin: 0px;
+}
+
+/* Inner bar container, surrounds buttons */
+#inner-box {
+    background-color: rgba(30, 30, 46, 0.85); /* Base (mantle, slightly transparent) */
+    border-radius: 10px;
+    border-style: none;
+    border-width: 1px;
+    border-color: rgba(189, 147, 249, 0.7); /* Lavender */
+    padding: 5px;
+    margin: 5px;
+}
+
+button, image {
+    background: none;
+    border: none;
+    box-shadow: none;
+}
+
+button {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 5px;
+}
+
+button:hover {
+    background-color: rgba(80, 250, 123, 0.1); /* Green hover effect */
+}
