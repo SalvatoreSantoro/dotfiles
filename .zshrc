@@ -1,4 +1,6 @@
 # ZSH
+# PROMPT
+PS1='%F{red}%~ %(?.%F{white}.%F{white})%#%f '
 export ZSH="$HOME/.oh-my-zsh"
 export FZF_BASE="/usr/bin/fzf"
 #export ELECTRON_OZONE_PLATFORM_HINT=auto
@@ -142,10 +144,6 @@ setopt HIST_IGNORE_SPACE
 setopt HIST_IGNORE_DUPS
 setopt SHARE_HISTORY
 
-# PROMPT
-
-PS1='%F{red}%~ %(?.%F{white}.%F{white})%#%f '
-
 # Define the fcd function to search a specific directory and change to it
 fcd() {
   local target_dir="${1:-$HOME}"  # Specify the default directory
@@ -157,11 +155,19 @@ fcd() {
   fi
 }
 
+
+neovim() {
+    nvim .
+}
+
+
 # Register the function as a ZLE widget
 zle -N fcd
+zle -N neovim
 
 # Bind CTRL+F to activate the fcd function
 bindkey '^F' fcd
+bindkey '^E' neovim
 
 #bindkey '^I^I' autosuggest-accept
 

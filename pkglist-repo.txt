@@ -13,6 +13,7 @@ fd
 firefox
 fuzzel
 fzf
+gdb
 gimp
 git
 go
