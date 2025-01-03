@@ -20,7 +20,9 @@ while true; do
             if [[ "$img" != "$1" ]]; then
                 uwsm app -- hyprctl hyprpaper preload "$img"
                 uwsm app -- hyprctl hyprpaper wallpaper "$MONITOR,$img"
-                uwsm app -- hyprctl hyprpaper unload "$img" 
+                uwsm app -- hyprctl hyprpaper unload "$img"
+                ln -sf "$img" "$HOME/.config/wallpapers/.current_wallpaper"
+                export "WALLPAPER=$img"
 			    sleep $INTERVAL
             fi 
 		done
