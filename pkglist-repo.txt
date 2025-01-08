@@ -4,6 +4,7 @@ base-devel
 brightnessctl
 cliphist
 code
+cowsay
 d-spy
 discord
 docker
@@ -17,11 +18,11 @@ fzf
 gdb
 gimp
 git
-gnome-tweaks
 go
 grim
 grub
 gtk4
+gvfs
 htop
 hypridle
 hyprland
@@ -66,6 +67,7 @@ sof-firmware
 steam
 texinfo
 thunar
+thunar-volman
 tree
 ttf-font-awesome
 ttf-jetbrains-mono-nerd

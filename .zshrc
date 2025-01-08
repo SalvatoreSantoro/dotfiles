@@ -58,7 +58,6 @@ export FZF_BASE="/usr/bin/fzf"
 # under VCS as dirty. This makes repository status check for large repositories
 # much, much faster.
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
-
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
 # You can set one of the optional three formats:
@@ -66,34 +65,21 @@ export FZF_BASE="/usr/bin/fzf"
 # or set a custom format using the strftime function format specifications,
 # see 'man strftime' for details.
 # HIST_STAMPS="mm/dd/yyyy"
-
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
-
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-
-plugins=(git fzf zsh-interactive-cd zsh-autosuggestions zsh-syntax-highlighting)
-
-
+plugins=(fzf zsh-interactive-cd zsh-autosuggestions zsh-syntax-highlighting)
 export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
-
 source $ZSH/oh-my-zsh.sh
-
 source <(fzf --zsh)
-
-
 # User configuration
-
 # export MANPATH="/usr/local/man:$MANPATH"
-
 # You may need to manually set your language environment
 export LANG=it_IT.UTF-8
-
-
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
 #   export EDITOR='vim'
@@ -115,11 +101,8 @@ export LANG=it_IT.UTF-8
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
- 
 # Scripts
 scriptsHome="~/dotfiles/scripts"
-
 alias dot='~/dotfiles/dotfiles.sh'
 alias path="$scriptsHome/path.sh"
 alias run_discord="$scriptsHome/run_discord.sh"
@@ -127,24 +110,17 @@ alias docker_psa="$scriptsHome/docker_psa.sh"
 alias docker_stop_all="$scriptsHome/docker_stop_all.sh"
 alias remove="$scriptsHome/remove.sh"
 alias sway_launch="$scriptsHome/sway_launcher.sh"
-
-
 # ENV
 set -o vi
-export BROWSER="firefox"
+#export BROWSER="firefox"
 #export ZDOTDIR="$HOME/.config/zsh"
-
 # HISTORY
-
 HISTFILE=~/.zsh_history
 HISTSIZE=1000
 SAVEHIST=1000
-
 setopt HIST_IGNORE_SPACE
 setopt HIST_IGNORE_DUPS
 setopt SHARE_HISTORY
-
-# Define the fcd function to search a specific directory and change to it
 fcd() {
   local target_dir="${1:-$HOME}"  # Specify the default directory
   local selected_dir=$(find "$target_dir" -type d 2>/dev/null | fzf --prompt="Select directory: ")
@@ -154,47 +130,10 @@ fcd() {
     zle reset-prompt  # Refresh prompt to show the new directory
   fi
 }
-
-
 neovim() {
     nvim .
 }
-
-
-# Register the function as a ZLE widget
 zle -N fcd
 zle -N neovim
-
-# Bind CTRL+F to activate the fcd function
 bindkey '^F' fcd
 bindkey '^E' neovim
-
-#bindkey '^I^I' autosuggest-accept
-
-
-# Enable highlighters
-ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern)
-
-# Override highlighter colors
-# ZSH_HIGHLIGHT_STYLES[default]=none
-# ZSH_HIGHLIGHT_STYLES[unknown-token]=fg=001
-# ZSH_HIGHLIGHT_STYLES[reserved-word]=fg=white
-# ZSH_HIGHLIGHT_STYLES[alias]=fg=white
-# ZSH_HIGHLIGHT_STYLES[builtin]=fg=white,bold
-# ZSH_HIGHLIGHT_STYLES[function]=fg=white,bold
-# ZSH_HIGHLIGHT_STYLES[command]=fg=001
-# ZSH_HIGHLIGHT_STYLES[precommand]=fg=red
-# ZSH_HIGHLIGHT_STYLES[commandseparator]=fg=red
-# ZSH_HIGHLIGHT_STYLES[hashed-command]=fg=white
-# ZSH_HIGHLIGHT_STYLES[path]=fg=white
-# ZSH_HIGHLIGHT_STYLES[globbing]=fg=white
-# ZSH_HIGHLIGHT_STYLES[history-expansion]=fg=white,underline
-# ZSH_HIGHLIGHT_STYLES[single-hyphen-option]=none
-# ZSH_HIGHLIGHT_STYLES[double-hyphen-option]=none
-# ZSH_HIGHLIGHT_STYLES[back-quoted-argument]=none
-# ZSH_HIGHLIGHT_STYLES[single-quoted-argument]=fg=white
-# ZSH_HIGHLIGHT_STYLES[double-quoted-argument]=fg=white
-# ZSH_HIGHLIGHT_STYLES[dollar-double-quoted-argument]=fg=white
-# ZSH_HIGHLIGHT_STYLES[back-double-quoted-argument]=fg=white
-# ZSH_HIGHLIGHT_STYLES[assign]=fg=white
-# ZSH_HIGHLIGHT_STYLES[fd]=fg=white
