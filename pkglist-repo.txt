@@ -40,7 +40,6 @@ linux-firmware
 linux-headers
 man-db
 man-pages
-maven
 nano
 neofetch
 neovim
