@@ -1,7 +1,10 @@
+7zip
 adw-gtk-theme
 base
 base-devel
+bear
 brightnessctl
+clang
 cliphist
 code
 cowsay
@@ -18,6 +21,7 @@ fzf
 gdb
 gimp
 git
+gnu-netcat
 go
 grim
 grub
@@ -48,7 +52,6 @@ npm
 nvidia
 nwg-bar
 nwg-look
-obs-studio
 obsidian
 openssh
 os-prober
@@ -63,7 +66,7 @@ qt5ct
 qt6ct
 slurp
 sof-firmware
-steam
+strace
 texinfo
 thunar
 thunar-volman
@@ -72,6 +75,7 @@ ttf-font-awesome
 ttf-jetbrains-mono-nerd
 ufw
 unzip
+uwsm
 v4l2loopback-dkms
 v4l2loopback-utils
 valgrind

@@ -1,8 +1,11 @@
 # ZSH
 # PROMPT
+# Your normal interactive shell configuration goes here
+
 PS1='%F{red}%~ %(?.%F{white}.%F{white})%#%f '
 export ZSH="$HOME/.oh-my-zsh"
 export FZF_BASE="/usr/bin/fzf"
+
 #export ELECTRON_OZONE_PLATFORM_HINT=auto
 #export QT_QPA_PLATFORM=wayland
 #export QT_SCALE_FACTOR=1
@@ -110,10 +113,18 @@ alias docker_psa="$scriptsHome/docker_psa.sh"
 alias docker_stop_all="$scriptsHome/docker_stop_all.sh"
 alias remove="$scriptsHome/remove.sh"
 alias sway_launch="$scriptsHome/sway_launcher.sh"
+
+#for C project
+#see https://github.com/rizsotto/Bear
+alias b="bear -- make"
+alias bc="bear -- make clean"
+alias br="bear -- make run"
+alias y="yazi"
 # ENV
 set -o vi
 #export BROWSER="firefox"
 #export ZDOTDIR="$HOME/.config/zsh"
+
 # HISTORY
 HISTFILE=~/.zsh_history
 HISTSIZE=1000
@@ -121,6 +132,7 @@ SAVEHIST=1000
 setopt HIST_IGNORE_SPACE
 setopt HIST_IGNORE_DUPS
 setopt SHARE_HISTORY
+
 fcd() {
   local target_dir="${1:-$HOME}"  # Specify the default directory
   local selected_dir=$(find "$target_dir" -type d 2>/dev/null | fzf --prompt="Select directory: ")
@@ -130,10 +142,15 @@ fcd() {
     zle reset-prompt  # Refresh prompt to show the new directory
   fi
 }
+
 neovim() {
     nvim .
 }
+
+
 zle -N fcd
 zle -N neovim
+
 bindkey '^F' fcd
 bindkey '^E' neovim
+
