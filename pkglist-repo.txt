@@ -64,6 +64,7 @@ qt5-quickcontrols2
 qt5-wayland
 qt5ct
 qt6ct
+rust
 slurp
 sof-firmware
 strace
@@ -74,6 +75,7 @@ tree
 ttf-font-awesome
 ttf-jetbrains-mono-nerd
 ufw
+unrar
 unzip
 uwsm
 v4l2loopback-dkms

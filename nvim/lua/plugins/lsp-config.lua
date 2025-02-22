@@ -12,7 +12,7 @@ return {
 		config = function()
 			-- ensure that we have lua language server, typescript launguage server, java language server, and java test language server are installed
 			require("mason-lspconfig").setup({
-				ensure_installed = { "lua_ls", "ts_ls", "jdtls", "clangd", "gopls", "html", "jsonls" },
+				ensure_installed = { "lua_ls", "ts_ls", "jdtls", "clangd", "gopls", "html", "jsonls", "asm_lsp" },
 			})
 		end,
 	},
@@ -91,6 +91,14 @@ return {
 			lspconfig.jsonls.setup({
 				capabilities = capabilities,
 			})
+
+			lspconfig.asm_lsp.setup({
+				cmd = { "asm-lsp" },
+				filetypes = { "asm", "nasm", "masm" },
+				root_dir = lspconfig.util.root_pattern(".git", "."),
+				settings = {},
+			})
+
 			-- Set vim motion for <Space> + c + h to show code documentation about the code the cursor is currently over if available
 			vim.keymap.set("n", "<leader>ch", vim.lsp.buf.hover, { desc = "[C]ode [H]over Documentation" })
 			-- Set vim motion for <Space> + c + d to go where the code/variable under the cursor was defined
