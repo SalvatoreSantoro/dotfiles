@@ -21,38 +21,38 @@ echo "           "
 
 home_directory="$HOME/.config"
 current_directory="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-modules=(".zshrc" "sway" "hypr" "kitty" "neofetch" "rofi" "waybar" "wallpapers" "nvim" "swaync" "wofi" "nwg-bar" "dunst")
+modules=(".zshrc" ".zprofile" ".gdbinit" "sway" "hypr" "kitty" "neofetch" "rofi" "waybar" "wallpapers" "nvim" "swaync" "wofi" "nwg-bar" "dunst")
 
 read operation
 
 if [[ "$operation" == "I" ]]; then
-	for mod in "${modules[@]}"; do
-                if [[ "$mod" == ".zshrc" ]];then
-			cp "$current_directory/$mod" "$HOME"
-		else	
-                	cp -r "$current_directory/$mod" "$home_directory"        
-		fi
-		echo "Copying $mod" 
-	done
+    for mod in "${modules[@]}"; do
+        if [[ "$mod" == ".zshrc" || "$mod" == ".zprofile" || "$mod" == ".gdbinit" ]]; then
+            cp "$current_directory/$mod" "$HOME"
+        else    
+            cp -r "$current_directory/$mod" "$home_directory"        
+        fi
+        echo "Copying $mod" 
+    done
 
-        echo "$current_directory => $home_directory"
-        echo "DONE"
-
+    echo "$current_directory => $home_directory"
+    echo "DONE"
 
 elif [[ "$operation" == "F" ]]; then
-	for mod in "${modules[@]}"; do
-		if [[ "$mod" == ".zshrc" ]];then
-			cp "$HOME/$mod" "$current_directory"
-		else
-			cp -r "$home_directory/$mod" "$current_directory"	
-		fi
-		echo "Copying $mod"
+    for mod in "${modules[@]}"; do
+        if [[ "$mod" == ".zshrc" || "$mod" == ".zprofile" || "$mod" == ".gdbinit" ]]; then
+            cp "$HOME/$mod" "$current_directory"
+        else
+            cp -r "$home_directory/$mod" "$current_directory"    
+        fi
+        echo "Copying $mod"
+    done
+
     pacman -Qqen > "$current_directory/pkglist-repo.txt"
     pacman -Qqem > "$current_directory/pkglist-aur.txt"
-	done
 
-	echo "$home_directory  => $current_directory"
-	echo "DONE"
+    echo "$home_directory  => $current_directory"
+    echo "DONE"
 
 
 elif [[ "$operation" == "P" ]]; then

@@ -45,6 +45,7 @@ linux-headers
 man-db
 man-pages
 nano
+nasm
 neofetch
 neovim
 networkmanager

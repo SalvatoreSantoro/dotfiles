@@ -1,5 +1,6 @@
 catppuccin-cursors-mocha
 catppuccin-gtk-theme-mocha
+exercism
 jmeter
 papirus-folders-catppuccin-git
 yay

@@ -94,9 +94,10 @@ return {
 
 			lspconfig.asm_lsp.setup({
 				cmd = { "asm-lsp" },
-				filetypes = { "asm", "nasm", "masm" },
+				filetypes = { "asm", "nasm", "masm", "gas", "goasm" }, -- Try more variations
 				root_dir = lspconfig.util.root_pattern(".git", "."),
 				settings = {},
+				capabilities = capabilities,
 			})
 
 			-- Set vim motion for <Space> + c + h to show code documentation about the code the cursor is currently over if available
