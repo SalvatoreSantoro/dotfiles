@@ -122,6 +122,7 @@ alias bc="bear -- make clean"
 alias br="bear -- make run"
 alias y="yazi"
 # ENV
+alias ta="tar -xvjf"
 set -o vi
 #export BROWSER="firefox"
 #export ZDOTDIR="$HOME/.config/zsh"
