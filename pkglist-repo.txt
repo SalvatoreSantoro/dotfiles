@@ -28,6 +28,7 @@ go
 grim
 grub
 gtk4
+gvim
 htop
 hypridle
 hyprland
@@ -38,6 +39,7 @@ hyprwayland-scanner
 intel-ucode
 jq
 kitty
+libaio
 libreoffice-still
 libva-nvidia-driver
 linux
