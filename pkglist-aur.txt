@@ -1,8 +1,15 @@
+bender
 catppuccin-cursors-mocha
 catppuccin-gtk-theme-mocha
 collectl
 exercism
+gcc13
 jmeter
+ncurses5-compat-libs
+ncurses5-compat-libs-debug
+neofetch
+nsight-systems
 papirus-folders-catppuccin-git
+python310
 yay
 yay-debug

@@ -12,7 +12,16 @@ return {
 		config = function()
 			-- ensure that we have lua language server, typescript launguage server, java language server, and java test language server are installed
 			require("mason-lspconfig").setup({
-				ensure_installed = { "lua_ls", "ts_ls", "jdtls", "clangd", "gopls", "html", "jsonls", "asm_lsp" },
+				ensure_installed = {
+					"lua_ls",
+					"ts_ls",
+					"jdtls",
+					"clangd",
+					"gopls",
+					"html",
+					"jsonls",
+					"asm_lsp",
+				},
 			})
 		end,
 	},
@@ -76,6 +85,10 @@ return {
 				capabilities = capabilities,
 			})
 
+			lspconfig.pyright.setup({
+				capabilities = capabilities,
+			})
+
 			lspconfig.clangd.setup({
 				cmd = {
 					"clangd",
@@ -94,7 +107,8 @@ return {
 
 			lspconfig.asm_lsp.setup({
 				cmd = { "asm-lsp" },
-				filetypes = { "asm", "nasm", "masm", "gas", "goasm" }, -- Try more variations
+				instruction_set = { "riscv" },
+				filetypes = { "asm", "nasm", "masm", "gas", "goasm", "avr", "S", "s" }, -- Try more variations
 				root_dir = lspconfig.util.root_pattern(".git", "."),
 				settings = {},
 				capabilities = capabilities,

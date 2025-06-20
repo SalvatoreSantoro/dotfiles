@@ -13,7 +13,7 @@ return {
 			config = function()
 				-- Ensure all formatters and linters are installed
 				require("mason-null-ls").setup({
-					ensure_installed = { "stylua", "prettier", "eslint_d" },
+					ensure_installed = { "stylua", "prettier", "eslint_d", "clang-format" },
 				})
 			end,
 		},
@@ -39,6 +39,7 @@ return {
 							}
 					end,
 				}),
+				null_ls.builtins.formatting.autopep8,
 			},
 		})
 

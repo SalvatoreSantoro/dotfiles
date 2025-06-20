@@ -5,7 +5,7 @@
 PS1='%F{red}%~ %(?.%F{white}.%F{white})%#%f '
 export ZSH="$HOME/.oh-my-zsh"
 export FZF_BASE="/usr/bin/fzf"
-export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="/opt/riscv32/bin:/.cargo/bin:/opt/cuda/bin:/opt/cuda:/home/Salvatore/Xilinx/Vivado/2024.2/bin:$PATH"
 
 #export ELECTRON_OZONE_PLATFORM_HINT=auto
 #export QT_QPA_PLATFORM=wayland
