@@ -5,7 +5,7 @@
 PS1='%F{red}%~ %(?.%F{white}.%F{white})%#%f '
 export ZSH="$HOME/.oh-my-zsh"
 export FZF_BASE="/usr/bin/fzf"
-export PATH="/opt/riscv32/bin:/.cargo/bin:/opt/cuda/bin:/opt/cuda:/home/Salvatore/Xilinx/Vivado/2024.2/bin:$PATH"
+export PATH="/opt/riscv64/gnu-toolchain64/bin:/opt/riscv32/bin:/.cargo/bin:/opt/cuda/bin:/opt/cuda:/home/Salvatore/Xilinx/Vivado/2024.2/bin:$PATH"
 
 #export ELECTRON_OZONE_PLATFORM_HINT=auto
 #export QT_QPA_PLATFORM=wayland
@@ -114,6 +114,7 @@ alias docker_psa="$scriptsHome/docker_psa.sh"
 alias docker_stop_all="$scriptsHome/docker_stop_all.sh"
 alias remove="$scriptsHome/remove.sh"
 alias sway_launch="$scriptsHome/sway_launcher.sh"
+alias u_setup="$scriptsHome/UninaSoC_setup.sh"
 
 #for C project
 #see https://github.com/rizsotto/Bear
@@ -148,7 +149,6 @@ fcd() {
 neovim() {
     nvim .
 }
-
 
 zle -N fcd
 zle -N neovim

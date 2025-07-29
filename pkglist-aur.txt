@@ -10,6 +10,7 @@ ncurses5-compat-libs-debug
 neofetch
 nsight-systems
 papirus-folders-catppuccin-git
+python-deadlib
 python310
 yay
 yay-debug

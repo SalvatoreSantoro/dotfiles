@@ -1,4 +1,9 @@
 vim.o.tags = "./tags;,tags"
+
+-- REMOVE
+-- vim.diagnostic.config({
+--   underline = false,
+-- })
 --vim.o.hidden = true 
 --vim.g.loaded_netrw = 1 
 --vim.g.loaded_netrwPlugin = 1 

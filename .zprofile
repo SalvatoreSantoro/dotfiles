@@ -1,4 +1,4 @@
-export UWSM_USE_SESSION_SLICE=true
+#export UWSM_USE_SESSION_SLICE=true
 #export XCURSOR_SIZE=10
 #export QT_QPA_PLATFORMTHEME=qt5ct
 

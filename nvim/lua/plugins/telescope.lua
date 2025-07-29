@@ -60,12 +60,13 @@ return {
         find_files = {
           file_ignore_patterns = { 'node_modules', '.git', '.venv' },
           hidden = true,
+          no_ignore = true,
         },
       },
       live_grep = {
         file_ignore_patterns = { 'node_modules', '.git', '.venv' },
         additional_args = function(_)
-          return { '--hidden' }
+          return { '--hidden', '--no-ignore' }
         end,
       },
       extensions = {
