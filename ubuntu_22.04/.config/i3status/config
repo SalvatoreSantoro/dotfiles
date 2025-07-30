@@ -1,0 +1,42 @@
+general {
+    colors = true
+    interval = 5
+    color_good = "#50fa7b"
+    color_degraded = "#f1fa8c"
+    color_bad = "#ff5555"
+}
+
+order += "cpu_temperature 0"
+order += "memory"
+order += "disk /"
+order += "battery 0"
+order += "time"
+
+
+cpu_temperature 0 {
+        format = "T: %degrees °C"
+        path = "/sys/devices/platform/coretemp.0/hwmon/hwmon6/temp1_input"
+}
+
+
+memory {
+    format = "%used/%total"
+    threshold_degraded = "1G"
+    format_degraded = "MEMORY: %free"
+}
+
+disk "/" {
+    format = " %avail"
+}
+
+
+
+battery 0 {
+    format = "🔋 %percentage %status"
+    low_threshold = 15
+}
+
+time {
+    format = " %Y-%m-%d  %H:%M"
+}
+
