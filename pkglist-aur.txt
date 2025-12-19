@@ -4,13 +4,14 @@ catppuccin-gtk-theme-mocha
 collectl
 exercism
 gcc13
-jmeter
+gnu-netcat
 ncurses5-compat-libs
 ncurses5-compat-libs-debug
 neofetch
-nsight-systems
 papirus-folders-catppuccin-git
 python-deadlib
 python310
+ventoy-bin
+woeusb-ng
 yay
 yay-debug

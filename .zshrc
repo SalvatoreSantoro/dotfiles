@@ -2,7 +2,15 @@
 # PROMPT
 # Your normal interactive shell configuration goes here
 
-PS1='%F{red}%~ %(?.%F{white}.%F{white})%#%f '
+autoload -Uz vcs_info
+precmd() { vcs_info }
+
+zstyle ':vcs_info:git:*' formats '(%b)'  # Show Git branch in parentheses
+zstyle ':vcs_info:*' enable git
+
+ 
+
+PS1='🤓💻 %F{red}%~%F{green}${vcs_info_msg_0_}%f %(?.%F{white}.%F{white})%#%f '
 export ZSH="$HOME/.oh-my-zsh"
 export FZF_BASE="/usr/bin/fzf"
 export PATH="/opt/riscv64/gnu-toolchain64/bin:/opt/riscv32/bin:/.cargo/bin:/opt/cuda/bin:/opt/cuda:/home/Salvatore/Xilinx/Vivado/2024.2/bin:$PATH"
@@ -76,7 +84,7 @@ export PATH="/opt/riscv64/gnu-toolchain64/bin:/opt/riscv32/bin:/.cargo/bin:/opt/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(fzf zsh-interactive-cd zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(git fzf zsh-interactive-cd zsh-autosuggestions zsh-syntax-highlighting)
 export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
 source $ZSH/oh-my-zsh.sh
 source <(fzf --zsh)
@@ -155,4 +163,3 @@ zle -N neovim
 
 bindkey '^F' fcd
 bindkey '^E' neovim
-
